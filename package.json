@@ -1,0 +1,31 @@
+{
+  "name": "cleanblog",
+  "version": "1.0.0",
+  "description": "CLEAN BLOG APP",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emrebulak/CLEANBLOG.git"
+  },
+  "keywords": [
+    "Clean",
+    "blog"
+  ],
+  "author": "Baran Emre BULAK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emrebulak/CLEANBLOG/issues"
+  },
+  "homepage": "https://github.com/emrebulak/CLEANBLOG#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "prettier": "2.5.1"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
