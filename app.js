@@ -1,9 +1,33 @@
 const express = require('express');
+const ejs = require('ejs');
+const path = require('path');
+
 const app = express();
 
-app.get('/', function (req, res) {
-  const blog = { id: 1, title: 'Blog title', description: 'Blog description' };
-  res.send(blog);
+//Template Engine
+app.set('view engine', 'ejs');
+//Template Engine
+
+app.use(express.static('public'));
+
+
+app.get('/', (req, res) => {
+    res.render('index');
+  });
+
+  app.get('/about', (req, res) => {
+  res.render('about');
 });
 
-app.listen(5000);
+app.get('/add', (req, res) => {
+  res.render('add');
+});
+
+app.get('*', (req, res) => {
+  res.render('index');
+});
+
+const port = 5000;
+app.listen(port, () => {
+    console.log(`Sunucu ${port} portunda başlatıldı.`);
+  });
