@@ -24,10 +24,13 @@
         <% for (let i =0; i < post.length; i++) { %>
 
         <div class="post-preview">
-          <a href="post.html">
+          <a href="/post/<%= post[i]._id %>">
             <h2 class="post-title"><%= post[i].title %></h2>
             <h3 class="post-subtitle"><%= post[i].description %></h3>
           </a>
+          <p class="post-meta">
+            <%= post[i].dateCreated %>
+          </p>
         </div>
         <hr />
 
