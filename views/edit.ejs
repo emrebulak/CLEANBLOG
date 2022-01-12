@@ -1,0 +1,50 @@
+<%- include('partials/_header') -%>
+<body>
+
+  <!-- Navigation -->
+  <%- include('partials/_navigation') -%>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/contact-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Edit The Post</h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <form action="/post/<%= post._id %>?_method=PUT" method="POST">
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <input name="title" type="text" value="<%= post.title %>" class="form-control" placeholder="Post Title" required>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+             
+              <textarea name="description" rows="5" class="form-control" placeholder="Post Description"  required ><%= post.description %></textarea>
+             
+            </div>
+          </div>
+          <br>
+          <div id="success"></div>
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <%- include('partials/_footer') -%>

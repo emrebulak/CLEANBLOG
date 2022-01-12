@@ -26,6 +26,10 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <p><%= posta.description %></p>
         </div>
+        <div class="col-lg-4 col-md-2 mx-auto">
+          <a href="/post/edit/<%= posta._id %>" class="btn btn-success">Update</a>
+          <a href="/post/<%= posta._id %>?_method=DELETE" onclick="return confirm('ARE YOU SURE?')" class="btn btn-danger">Delete</a>
+        </div>
       </div>
     </div>
   </article>
